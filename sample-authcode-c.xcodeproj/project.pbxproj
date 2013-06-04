@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27DC283F175E3A9A002C2A24 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 27DC283E175E3A9A002C2A24 /* main.c */; };
+		27DC2841175E3A9A002C2A24 /* sample_authcode_c.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27DC2840175E3A9A002C2A24 /* sample_authcode_c.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27DC2839175E3A9A002C2A24 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				27DC2841175E3A9A002C2A24 /* sample_authcode_c.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27DC283B175E3A9A002C2A24 /* sample-authcode-c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sample-authcode-c"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27DC283E175E3A9A002C2A24 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		27DC2840175E3A9A002C2A24 /* sample_authcode_c.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = sample_authcode_c.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27DC2838175E3A9A002C2A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27DC2832175E3A9A002C2A24 = {
+			isa = PBXGroup;
+			children = (
+				27DC283D175E3A9A002C2A24 /* sample-authcode-c */,
+				27DC283C175E3A9A002C2A24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27DC283C175E3A9A002C2A24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27DC283B175E3A9A002C2A24 /* sample-authcode-c */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27DC283D175E3A9A002C2A24 /* sample-authcode-c */ = {
+			isa = PBXGroup;
+			children = (
+				27DC283E175E3A9A002C2A24 /* main.c */,
+				27DC2840175E3A9A002C2A24 /* sample_authcode_c.1 */,
+			);
+			path = "sample-authcode-c";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27DC283A175E3A9A002C2A24 /* sample-authcode-c */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27DC2844175E3A9A002C2A24 /* Build configuration list for PBXNativeTarget "sample-authcode-c" */;
+			buildPhases = (
+				27DC2837175E3A9A002C2A24 /* Sources */,
+				27DC2838175E3A9A002C2A24 /* Frameworks */,
+				27DC2839175E3A9A002C2A24 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sample-authcode-c";
+			productName = "sample-authcode-c";
+			productReference = 27DC283B175E3A9A002C2A24 /* sample-authcode-c */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27DC2833175E3A9A002C2A24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "TradeStation Technologies";
+			};
+			buildConfigurationList = 27DC2836175E3A9A002C2A24 /* Build configuration list for PBXProject "sample-authcode-c" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27DC2832175E3A9A002C2A24;
+			productRefGroup = 27DC283C175E3A9A002C2A24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27DC283A175E3A9A002C2A24 /* sample-authcode-c */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27DC2837175E3A9A002C2A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DC283F175E3A9A002C2A24 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		27DC2842175E3A9A002C2A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27DC2843175E3A9A002C2A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		27DC2845175E3A9A002C2A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27DC2846175E3A9A002C2A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27DC2836175E3A9A002C2A24 /* Build configuration list for PBXProject "sample-authcode-c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DC2842175E3A9A002C2A24 /* Debug */,
+				27DC2843175E3A9A002C2A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27DC2844175E3A9A002C2A24 /* Build configuration list for PBXNativeTarget "sample-authcode-c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DC2845175E3A9A002C2A24 /* Debug */,
+				27DC2846175E3A9A002C2A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27DC2833175E3A9A002C2A24 /* Project object */;
+}
