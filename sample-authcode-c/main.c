@@ -2,7 +2,6 @@
 //  main.c
 //  sample-authcode-c
 //
-//  Created by John Jelinek on 6/4/13.
 //  Copyright (c) 2013 TradeStation Technologies. All rights reserved.
 //
 
@@ -28,9 +27,16 @@ typedef struct
     uint8_t *data;  // insert bytes here
 } buf_t;
 
+typedef struct
+{
+    char *access_token;
+    char *refresh_token;
+} Token;
+
 // prototypes
 char *getAuthCode( void );
-char * getAccessToken( const char *authCode );
+char *getAccessToken( const char *authCode );
+void getQuote( const char *accessToken );
 buf_t * buf_size( buf_t *buf, size_t len );
 jsmntok_t * json_tokenize( char *json );
 
@@ -44,6 +50,10 @@ int main( void )
     
     authCode = getAuthCode();
     accessToken = getAccessToken( authCode );
+    
+    printf( "Access Token: %s", accessToken );
+    
+    getQuote( accessToken );
     
     free( authCode );
     authCode = NULL;
@@ -97,6 +107,7 @@ char * getAccessToken( const char *authCode )
     CURL *curl = curl_easy_init();
     char *json;
     char *KEYS[] = { "access_token" };
+    char *accessToken;
     
     if ( curl ) {
         curl_easy_setopt( curl, CURLOPT_URL, SIM_ENVIRONMENT"/security/authorize");
@@ -170,7 +181,6 @@ char * getAccessToken( const char *authCode )
                     for ( size_t i = 0; i < sizeof( KEYS ) / sizeof( char * ); i++) {
                         if ( strncmp( json + t->start, KEYS[ i ], t->end - t->start ) == 0
                             && strlen( KEYS[ i ] ) == ( size_t ) ( t->end - t->start ) ) {
-                            printf( "%s: ", KEYS[ i ] );
                             state = PRINT;
                             break;
                         }
@@ -190,8 +200,7 @@ char * getAccessToken( const char *authCode )
                     
                 case PRINT:
                     json[ t->end ] = '\0';
-                    char *str = json + t->start;
-                    puts( str );
+                    accessToken = json + t->start;
                     
                     object_tokens--;
                     state = KEY;
@@ -208,9 +217,29 @@ char * getAccessToken( const char *authCode )
             }
         }
         
-        return json;
+        return accessToken;
     } else {
         return "FAIL: Unable to parse json";
+    }
+}
+
+void getQuote( const char *accessToken )
+{
+    CURL *curl = curl_easy_init();
+    
+    if ( curl ) {
+        char buffer [1024];
+        sprintf( buffer, SIM_ENVIRONMENT"/data/quote/msft?oauth_token=%s", accessToken );
+        curl_easy_setopt( curl, CURLOPT_URL, buffer );
+        
+        puts( "\n\nGot Data Quote:\n\n" );
+        CURLcode result = curl_easy_perform( curl );
+        
+        if ( CURLE_OK != result ) {
+            fprintf( stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror( result ) );
+        }
+        
+        curl_easy_cleanup( curl );
     }
 }
 
