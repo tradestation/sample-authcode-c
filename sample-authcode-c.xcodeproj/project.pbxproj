@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2768E871175FB7DE00AAA46B /* libjsmn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2768E870175FB7DE00AAA46B /* libjsmn.a */; };
 		27DC283F175E3A9A002C2A24 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 27DC283E175E3A9A002C2A24 /* main.c */; };
 		27DC2841175E3A9A002C2A24 /* sample_authcode_c.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27DC2840175E3A9A002C2A24 /* sample_authcode_c.1 */; };
 		27DC2848175E4823002C2A24 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DC2847175E4823002C2A24 /* libcurl.dylib */; };
+		76A3E7B717721B460009CA85 /* libjsmn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A3E7B617721B460009CA85 /* libjsmn.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +33,7 @@
 		27DC283E175E3A9A002C2A24 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		27DC2840175E3A9A002C2A24 /* sample_authcode_c.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = sample_authcode_c.1; sourceTree = "<group>"; };
 		27DC2847175E4823002C2A24 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
+		76A3E7B617721B460009CA85 /* libjsmn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsmn.a; path = "sample-authcode-c/libjsmn.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2768E871175FB7DE00AAA46B /* libjsmn.a in Frameworks */,
+				76A3E7B717721B460009CA85 /* libjsmn.a in Frameworks */,
 				27DC2848175E4823002C2A24 /* libcurl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +61,7 @@
 		27DC2832175E3A9A002C2A24 = {
 			isa = PBXGroup;
 			children = (
+				76A3E7B617721B460009CA85 /* libjsmn.a */,
 				27DC283D175E3A9A002C2A24 /* sample-authcode-c */,
 				2772CBE6175E9DE0007A6D87 /* Frameworks */,
 				27DC283C175E3A9A002C2A24 /* Products */,
@@ -205,6 +207,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../jsmn\"",
+					"\"$(SRCROOT)/sample-authcode-c\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -216,6 +219,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../jsmn\"",
+					"\"$(SRCROOT)/sample-authcode-c\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
